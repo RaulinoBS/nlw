@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% set pageId = "page-home" %}
+
+{% block styles %}
+  <link rel="stylesheet" href="/style/home.css">
+  <link rel="stylesheet" href="/style/modal.css">
+{% endblock styles %}
+
+{% block content %}
+  <div class="content">
+    <header>
+      <a href="/">
+        <picture>
+          <source media="(max-width:630px )" srcset="/assets/white-logo.svg">
+          <img src="/assets/logo.svg" alt="logomarca">
+        </picture>
+      </a>
+      <a class="footer" href="/create-point">
+        <span></span>
+        <p>Cadastre um ponto de coleta</p>
+      </a>
+    </header>
+    <main>
+
+      <h1>Seu marcketplace de coleta de resíduos</h1>
+      <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficaz.</p>
+
+      <a href="#" onclick="changeModal()">
+        <strong>Pesquisar ponto de coleta</strong>
+        <span></span>
+      </a >
+
+    </main>
+  </div>
+{% endblock content %}
+{% block modal %}
+  {% include "partials/modal.html" %}
+{% endblock modal %}
+
+{% block scripts %}
+  <script src="/scripts/index.js"></script>
+{% endblock scripts %}
